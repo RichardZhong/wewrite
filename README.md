@@ -156,6 +156,7 @@ cp config.example.yaml config.yaml
 你：换成 sspai 主题               → 切换主题
 你：看看文章数据怎么样            → 效果复盘
 你：做一个小绿书                  → 图片帖（横滑轮播）
+你：检查一下反 AI 配置              → 诊断报告
 ```
 
 ## 目录结构
@@ -266,6 +267,9 @@ python3 scripts/fetch_hotspots.py --limit 20
 
 # SEO 分析
 python3 scripts/seo_keywords.py --json "AI大模型" "科技股"
+
+# 诊断反 AI 配置
+python3 scripts/diagnose.py
 ```
 
 ## License
