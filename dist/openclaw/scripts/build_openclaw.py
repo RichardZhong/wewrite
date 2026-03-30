@@ -104,7 +104,9 @@ def build(output_dir: Path):
         if src.is_dir():
             if dst.exists():
                 shutil.rmtree(dst)
-            shutil.copytree(src, dst)
+            shutil.copytree(src, dst, ignore=shutil.ignore_patterns(
+                "__pycache__", "*.pyc", "*.pyo",
+            ))
             print(f"  {d}/ → {dst}")
 
     # Copy supporting files
